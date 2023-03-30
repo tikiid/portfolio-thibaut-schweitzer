@@ -1,0 +1,217 @@
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* VARIABLES */
+
+body{
+    margin: 0 auto;
+    background-color: var(--color-black-hex);
+    margin: 0 32px;
+}
+
+:root{
+    /* Color */
+
+    --color-black-hex: #181817;
+    --color-white-hex: #D1D1D1;
+
+    /* Font */
+
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+h1{
+    font-family: 'Lexend', sans-serif;
+    font-size: 2.4rem;
+}
+
+h2{
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+h3{
+    font-size: 1.2rem;
+}
+
+h4{
+    font-size: 1rem;
+
+}
+
+h1,
+h2,
+h3,
+h4{
+    margin: 0;
+}
+
+.color-black{
+    color: var(--color-black-hex);
+}
+
+.color-white{
+    color: var(--color-white-hex);
+}
+
+/* BUTTONS */
+
+.access_link{
+    text-decoration: none;
+    color: var(--color-black-hex);
+    border: 2px solid var(--color-black-hex);
+    border-radius: 25px;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.access_link:hover{
+    background-color: var(--color-black-hex);
+    color: var(--color-white-hex);
+}
+
+/* HEADER - ASIDE */
+
+header{
+    display: flex;
+    height: 100vh;
+    z-index: 0;
+    margin-bottom: 128px;
+}
+
+/* HEADER - ASIDE */
+
+header aside{
+    position: fixed;
+
+}
+
+header aside nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    height: 100vh;
+}
+
+header aside a svg{
+    width: 50px;
+}
+
+/* HEADER - SECTION */
+
+header section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 128px;
+    padding-left: 128px;
+    width: 100%;
+    position: relative;
+}
+
+header section h1{
+    align-self: flex-start;
+
+}
+
+header section h2{
+    align-self: center;
+    text-align: center;
+    max-width: 70vw;
+    margin-top: 256px;
+}
+
+header section #bottom-header-circle{
+    position: absolute;
+    z-index: 9;
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    right: 53%;
+    left: 47%;
+    bottom: -75px;
+}
+
+header section #bottom-header-circle a{
+    text-decoration: none;
+    position: absolute;
+}
+
+header section #bottom-header-circle a:nth-child(1){
+    top: 28px;
+    left: 39px;
+    z-index: 10;
+}
+
+header section #bottom-header-circle a:nth-child(2){
+    
+    top: 80px;
+    left: 15px;
+    z-index: 10;
+}
+
+header section #bottom-header-circle a h3{
+   color: var(--color-black-hex);
+}
+
+/* MAIN */
+
+main{
+
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    margin: 0px 64px 256px 128px;
+}
+
+main section .flip-card-project{
+    background-color: transparent;
+    width: 350px;
+    height: 400px;
+
+    perspective: 1000px;
+
+}
+
+main section .flip-card-project-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white-hex);
+    border-radius: 25px;
+    text-align: center;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(255,255,255,0.2);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+main section .flip-card-project-inner:hover{
+    box-shadow: 0 6px 10px 0 rgba(255,255,255,0.5);
+
+}
+
+main section .flip-card-project-front{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: var(--color-white-hex);
+
+}
+
+main section .flip-card-project-front img{
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card-project-front-content h3, .flip-card-project-front-content h4{
+    color: var(--color-black-hex);
+}
+
+
