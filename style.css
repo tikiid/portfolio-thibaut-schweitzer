@@ -80,6 +80,7 @@ header{
     height: 100vh;
     z-index: 0;
     margin-bottom: 128px;
+    scroll-behavior: smooth;
 }
 
 /* HEADER - ASIDE */
@@ -144,6 +145,8 @@ header section #bottom-header-circle{
 header section #bottom-header-circle a{
     text-decoration: none;
     position: absolute;
+    scroll-behavior: smooth;
+    
 }
 
 header section #bottom-header-circle a:nth-child(1){
@@ -171,6 +174,8 @@ main{
     flex-direction: column;
     gap: 64px;
     margin: 0px 64px 256px 128px;
+    scroll-behavior: smooth;
+    
 }
 
 .flip-card-project{
