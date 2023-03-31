@@ -142,27 +142,37 @@ header section #bottom-header-circle{
     bottom: -75px;
 }
 
-header section #bottom-header-circle a{
+/* header section #bottom-header-circle a{
     text-decoration: none;
     position: absolute;
-    scroll-behavior: smooth;
-    
+    display: none;    
+} */
+
+header section #bottom-header-circle button{
+    position:absolute;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
-header section #bottom-header-circle a:nth-child(1){
+header section #bottom-header-circle button:nth-child(1){
     top: 28px;
     left: 39px;
     z-index: 10;
 }
 
-header section #bottom-header-circle a:nth-child(2){
+header section #bottom-header-circle button:nth-child(2){
     
     top: 80px;
     left: 15px;
     z-index: 10;
 }
 
-header section #bottom-header-circle a h3{
+header section #bottom-header-circle button h3{
    color: var(--color-black-hex);
 }
 
