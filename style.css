@@ -97,6 +97,10 @@ header aside nav{
     height: 100vh;
 }
 
+header aside a{
+    cursor: pointer;
+}
+
 header aside a svg{
     width: 50px;
 }
@@ -110,6 +114,7 @@ header section{
     padding-left: 128px;
     width: 100%;
     position: relative;
+    justify-content: space-evenly;
 }
 
 header section h1{
@@ -121,7 +126,7 @@ header section h2{
     align-self: center;
     text-align: center;
     max-width: 70vw;
-    margin-top: 256px;
+    
 }
 
 header section #bottom-header-circle{
@@ -168,16 +173,14 @@ main{
     margin: 0px 64px 256px 128px;
 }
 
-main section .flip-card-project{
+.flip-card-project{
     background-color: transparent;
     width: 350px;
-    height: 400px;
-
+    height: 450px;
     perspective: 1000px;
-
 }
 
-main section .flip-card-project-inner{
+.flip-card-project-inner{
     position: relative;
     width: 100%;
     height: 100%;
@@ -191,24 +194,45 @@ main section .flip-card-project-inner{
     overflow: hidden;
 }
 
-main section .flip-card-project-inner:hover{
+.flip-card-project-inner:hover{
     box-shadow: 0 6px 10px 0 rgba(255,255,255,0.5);
 
 }
 
-main section .flip-card-project-front{
+.flip-card-project-front{
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    justify-content: space-between;
     background-color: var(--color-white-hex);
-
-}
-
-main section .flip-card-project-front img{
-    width: 100%;
+    padding-bottom: 15px;
     height: 100%;
 }
+
+.flip-card-project-front img{
+    /* width: 100%; */
+    height: 50%;
+}
+
+main section .flip-card-project-front .flip-card-project-front-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 45%;
+
+}
+
+
+main section .flip-card-project-front-content .flip-card-project-front-content-title{
+    width: 100%;
+    align-self: flex-start;
+}
+
+main section .flip-card-project-front-content a{
+    justify-self: flex-end;
+}
+
+
 
 .flip-card-project-front-content h3, .flip-card-project-front-content h4{
     color: var(--color-black-hex);
