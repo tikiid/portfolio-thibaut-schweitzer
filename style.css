@@ -87,7 +87,6 @@ header{
 
 header aside{
     position: fixed;
-
 }
 
 header aside nav{
@@ -98,20 +97,27 @@ header aside nav{
     height: 100vh;
 }
 
-header aside a{
+header aside nav div{
     cursor: pointer;
 }
 
-header aside a svg{
-    width: 50px;
+header aside nav div a{
+    z-index: 10;
+    cursor: pointer;
 }
+
+header aside nav div a svg:hover{
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+
+}
+
 
 /* HEADER - SECTION */
 
 header section{
     display: flex;
     flex-direction: column;
-    margin-top: 128px;
+    margin-top: 10vh;
     padding-left: 128px;
     width: 100%;
     position: relative;
@@ -188,6 +194,13 @@ main{
     
 }
 
+main #main-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px;
+    justify-content: center;
+}
+
 .flip-card-project{
     background-color: transparent;
     width: 350px;
@@ -199,7 +212,7 @@ main{
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: var(--color-white-hex);
+    background-color: white;
     border-radius: 25px;
     text-align: center;
     transition: 0.6s;
@@ -219,7 +232,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--color-white-hex);
+    background-color: white;
     padding-bottom: 15px;
     height: 100%;
 }
@@ -233,7 +246,9 @@ main section .flip-card-project-front .flip-card-project-front-content{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 45%;
+    height: 50%;
+    padding-top: 10px;
+    padding-bottom: 20px;
 
 }
 
@@ -241,16 +256,19 @@ main section .flip-card-project-front .flip-card-project-front-content{
 main section .flip-card-project-front-content .flip-card-project-front-content-title{
     width: 100%;
     align-self: flex-start;
+    
 }
 
-main section .flip-card-project-front-content a{
-    justify-self: flex-end;
+main section .flip-card-project-front-content .flip-card-project-front-content-title h4{
+    padding: 10px;
+}
+
+#logo-minus,#logo-chrysalide{
+    scale: 0.8;
 }
 
 
 
-.flip-card-project-front-content h3, .flip-card-project-front-content h4{
-    color: var(--color-black-hex);
-}
+
 
 
