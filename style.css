@@ -215,20 +215,44 @@ main #main-content{
     background-color: white;
     border-radius: 25px;
     text-align: center;
-    transition: 0.6s;
+    transition: transform 0.6s;
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(255,255,255,0.2);
-    cursor: pointer;
     overflow: hidden;
 }
 
-.flip-card-project-inner:hover{
-    box-shadow: 0 6px 10px 0 rgba(255,255,255,0.5);
+.flip-card-project:hover .flip-card-project-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-project:hover .flip-card-project-front{
+    backface-visibility: hidden;
 
 }
 
+.flip-card-project-front, .flip-card-project-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.flip-card-project-back{
+    
+}
+
+
+/* .flip-card-project-inner:hover{
+    box-shadow: 0 6px 10px 0 rgba(255,255,255,0.5);
+} */
+
+.flip-card-project-back{
+    transform: rotateY(180deg);
+    background-color: white;
+    color: var(--color-black-hex);
+    backface-visibility: hidden;
+}
 .flip-card-project-front{
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -249,7 +273,6 @@ main section .flip-card-project-front .flip-card-project-front-content{
     height: 50%;
     padding-top: 10px;
     padding-bottom: 20px;
-
 }
 
 
