@@ -204,7 +204,7 @@ main #main-content{
 .flip-card-project{
     background-color: transparent;
     width: 350px;
-    height: 450px;
+    height: 400px;
     perspective: 1000px;
 }
 
@@ -219,6 +219,7 @@ main #main-content{
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(255,255,255,0.2);
     overflow: hidden;
+    /* backface-visibility: hidden; */
 }
 
 .flip-card-project:hover .flip-card-project-inner {
@@ -227,7 +228,7 @@ main #main-content{
 
 .flip-card-project:hover .flip-card-project-front{
     backface-visibility: hidden;
-
+    -webkit-backface-visibility: hidden;
 }
 
 .flip-card-project-front, .flip-card-project-back{
@@ -235,8 +236,13 @@ main #main-content{
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
 }
+
 .flip-card-project-back{
+    background-color: var(--color-black-hex);
+    backface-visibility: hidden;
     
 }
 
