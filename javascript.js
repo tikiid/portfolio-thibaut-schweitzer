@@ -1,6 +1,5 @@
 nextButton = document.getElementById('next-button')
 
-
 window.smoothScroll = function(target) {
     var scrollContainer = target;
     do { //find scroll container
@@ -24,29 +23,7 @@ window.smoothScroll = function(target) {
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
 
-const svgTwitter = document.getElementById("link-to-twitter");
-const svgLinkedin = document.getElementById("link-to-linkedin");
-const svgInstagram = document.getElementById("link-to-instagram");
-const svgGithub = document.getElementById("link-to-github");
 
-const linkTwitter = 'https://twitter.com/Tikiid_';
-const linkLinkedin = "https://www.linkedin.com/in/thibaut-schweitzer-635223201/";
-const linkInstagram = null;
-const linkGithub = 'https://github.com/tikiid';
-
-function goToUrl(url){
-    window.open(url, '_blank').focus();
-}
-
-// svgLinkedin.addEventListener('click', function(){
-//     window.open(linkLinkedin, '_blank').focus()
-// })
-
-function showMsg() {
-    console.log("Bonjour");
-}
-
-svgLinkedin.addEventListener('click', showMsg);
 
 
 
