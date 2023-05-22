@@ -14,7 +14,7 @@ body{
     /* Color */
 
     --color-black-hex: #181817;
-    --color-white-hex: #FEFEFE;
+    --color-white-hex: #FAFAFA;
 
     /* Font */
 
@@ -109,19 +109,16 @@ header aside nav{
     height: 100vh;
 }
 
-header aside nav div{
-    cursor: pointer;
-}
-
 header aside nav div a{
     z-index: 10;
     cursor: pointer;
 }
 
-header aside nav div a svg:hover{
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-
+header aside nav div a:hover > header aside nav div a img {
+    filter: drop-shadow(22px 17px 5px var(--color-white-hex));
 }
+
+
 
 
 /* HEADER - SECTION */
