@@ -114,7 +114,7 @@ header aside nav div a{
     cursor: pointer;
 }
 
-header aside nav div a:hover > header aside nav div a img {
+header aside nav div a:hover > header aside nav div a img{
     filter: drop-shadow(22px 17px 5px var(--color-white-hex));
 }
 
@@ -203,42 +203,64 @@ main{
     
 }
 
+/* PROJECTS */
+
 main #main-content{
+    
     display: flex;
     flex-wrap: wrap;
     gap: 64px;
     justify-content: center;
     position: relative;
+    height: 450px;
+    width: 80%;
 }
 
-main #main-content section {
-    width: 300px;
-    height: 430px;
+.main-content-wrapper {
+    counter-reset: count;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+main #main-content .main-content-items {
     display: flex;
     flex-direction: column;
     background-color: var(--color-white-hex);
-    overflow: hidden;
     padding: 15px;
     border-radius: 15px;
     transition: 0.2s;
+
+    counter-increment: count;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 30vw;
+    height: 100%;
+    overflow: hidden;
 }
 
 
-main #main-content section:hover{
+main #main-content .main-content-items:hover{
     box-shadow: 0px 3px 10px white;
 }
 
-.card-image-project{
+.main-content-items .card-image-project{
     max-height: 200px;
     overflow: hidden;
 }
 
-.card-image-project img{
+.main-content-items .card-image-project img{
     width: 100%;
     border-radius: 15px;
 }
 
-.project-card-content {
+.main-content-items .project-card-content {
     text-align: center;
     height: 60%;
     display: flex;
