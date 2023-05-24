@@ -38,12 +38,12 @@ h3{
 }
 
 h4{
-    font-size: 1rem;
+    font-size: 0.8rem;
 
 }
 
 h5{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 p {
@@ -72,10 +72,12 @@ p{
 .access_link{
     text-decoration: none;
     color: var(--color-black-hex);
+    font-size: 1rem;
     border: 2px solid var(--color-black-hex);
     border-radius: 25px;
-    padding: 5px 10px;
+    padding: 10px 20px ;
     transition: 0.3s;
+    margin-bottom: 10px;
 }
 
 .access_link:hover{
@@ -181,7 +183,6 @@ header section #bottom-header-circle button:nth-child(1){
 }
 
 header section #bottom-header-circle button:nth-child(2){
-
     top: 80px;
     left: 15px;
     z-index: 10;
@@ -206,26 +207,31 @@ main{
 /* PROJECTS */
 
 main #main-content{
-    
     display: flex;
     flex-wrap: wrap;
     gap: 64px;
     justify-content: center;
     position: relative;
-    height: 450px;
-    width: 80%;
+    height: 430px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .main-content-wrapper {
-    counter-reset: count;
     display: flex;
-    position: absolute;
-    z-index: 1;
     height: 100%;
-    top: 0;
-    left: 0;
     width: 100%;
+	font-size: 0;
+    gap: 15px;
+    overflow-x: auto;
+    white-space: nowrap;
+
+	
+	&.active {
+		cursor: grab;
+	}
 }
+
 
 main #main-content .main-content-items {
     display: flex;
@@ -233,16 +239,10 @@ main #main-content .main-content-items {
     background-color: var(--color-white-hex);
     padding: 15px;
     border-radius: 15px;
+    width: 30%;
+    height: 90%;
     transition: 0.2s;
-
-    counter-increment: count;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 30vw;
-    height: 100%;
-    overflow: hidden;
+    white-space: normal;
 }
 
 
@@ -252,7 +252,7 @@ main #main-content .main-content-items:hover{
 
 .main-content-items .card-image-project{
     max-height: 200px;
-    overflow: hidden;
+    margin-bottom:  5px; ;
 }
 
 .main-content-items .card-image-project img{
@@ -262,7 +262,7 @@ main #main-content .main-content-items:hover{
 
 .main-content-items .project-card-content {
     text-align: center;
-    height: 60%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

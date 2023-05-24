@@ -1,5 +1,3 @@
-import { gsap } from "gsap";
-
 nextButton = document.getElementById('next-button')
 
 window.smoothScroll = function(target) {
@@ -25,127 +23,40 @@ window.smoothScroll = function(target) {
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
 
-/*--------------------
-Vars
---------------------*/
-const $menu = document.querySelector('#main-content')
-const $items = document.querySelectorAll('.main-content-items')
-const $images = document.querySelectorAll('.main-content-items img')
-let menuWidth = $menu.clientWidth
-let itemWidth = $items[0].clientWidth
-let wrapWidth = $items.length * itemWidth
+let isDown = false;
+let startX;
+let scrollLeft;
+const slider = document.querySelector('.main-content-items');
 
-let scrollSpeed = 0
-let oldScrollY = 0
-let scrollY = 0
-let y = 0
-
-
-/*--------------------
-Lerp
---------------------*/
-const lerp = (v0, v1, t) => {
-  return v0 * ( 1 - t ) + v1 * t
+const end = () => {
+	isDown = false;
+  slider.classList.remove('active');
 }
 
-
-/*--------------------
-Dispose
---------------------*/
-const dispose = (scroll) => {
-  gsap.set($items, {
-    x: (i) => {
-      return i * itemWidth + scroll
-    },
-    modifiers: {
-      x: (x, target) => {
-        const s = gsap.utils.wrap(-itemWidth, wrapWidth - itemWidth, parseInt(x))
-        return `${s}px`
-      }
-    }
-  })
-} 
-dispose(0)
-
-
-/*--------------------
-Wheel
---------------------*/
-const handleMouseWheel = (e) => {
-  scrollY -= e.deltaY * 0.9
+const start = (e) => {
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX || e.touches[0].pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;	
 }
 
+const move = (e) => {
+	if(!isDown) return;
 
-/*--------------------
-Touch
---------------------*/
-let touchStart = 0
-let touchX = 0
-let isDragging = false
-const handleTouchStart = (e) => {
-  touchStart = e.clientX || e.touches[0].clientX
-  isDragging = true
-  $menu.classList.add('is-dragging')
-}
-const handleTouchMove = (e) => {
-  if (!isDragging) return
-  touchX = e.clientX || e.touches[0].clientX
-  scrollY += (touchX - touchStart) * 2.5
-  touchStart = touchX
-}
-const handleTouchEnd = () => {
-  isDragging = false
-  $menu.classList.remove('is-dragging')
+  e.preventDefault();
+  const x = e.pageX || e.touches[0].pageX - slider.offsetLeft;
+  const dist = (x - startX);
+  slider.scrollLeft = scrollLeft - dist;
 }
 
+(() => {
+	slider.addEventListener('mousedown', start);
+	slider.addEventListener('touchstart', start);
 
-/*--------------------
-Listeners
---------------------*/
-$menu.addEventListener('mousewheel', handleMouseWheel)
+	slider.addEventListener('mousemove', move);
+	slider.addEventListener('touchmove', move);
 
-$menu.addEventListener('touchstart', handleTouchStart)
-$menu.addEventListener('touchmove', handleTouchMove)
-$menu.addEventListener('touchend', handleTouchEnd)
-
-$menu.addEventListener('mousedown', handleTouchStart)
-$menu.addEventListener('mousemove', handleTouchMove)
-$menu.addEventListener('mouseleave', handleTouchEnd)
-$menu.addEventListener('mouseup', handleTouchEnd)
-
-$menu.addEventListener('selectstart', () => { return false })
-
-
-/*--------------------
-Resize
---------------------*/
-window.addEventListener('resize', () => {
-  menuWidth = $menu.clientWidth
-  itemWidth = $items[0].clientWidth
-  wrapWidth = $items.length * itemWidth
-})
-
-
-/*--------------------
-Render
---------------------*/
-const render = () => {
-  requestAnimationFrame(render)
-  y = lerp(y, scrollY, .1)
-  dispose(y)
-  
-  scrollSpeed = y - oldScrollY
-  oldScrollY = y
-  
-  gsap.to($items, {
-    skewX: -scrollSpeed * .2,
-    rotate: scrollSpeed * .01,
-    scale: 1 - Math.min(100, Math.abs(scrollSpeed)) * 0.003
-  })
-}
-render()
-
-
-
-
-
+	slider.addEventListener('mouseleave', end);
+	slider.addEventListener('mouseup', end);
+	slider.addEventListener('touchend', end);
+})();
