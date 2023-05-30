@@ -214,22 +214,16 @@ main #main-content{
     position: relative;
     height: 430px;
     width: 100%;
-    overflow: hidden;
 }
 
 .main-content-wrapper {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     height: 100%;
-    width: 100%;
 	font-size: 0;
     gap: 15px;
-    overflow-x: auto;
-    white-space: nowrap;
-
-	
-	&.active {
-		cursor: grab;
-	}
+    padding: 10px;
 }
 
 
@@ -237,9 +231,9 @@ main #main-content .main-content-items {
     display: flex;
     flex-direction: column;
     background-color: var(--color-white-hex);
-    padding: 15px;
+    padding: 20px;
     border-radius: 15px;
-    width: 30%;
+    max-width: 300px;
     height: 90%;
     transition: 0.2s;
     white-space: normal;
@@ -280,6 +274,10 @@ main #main-content .main-content-items:hover{
     :root{
         font-size: 20px;
     }
+
+    main #main-content {
+        height: 400px;
+    }
 }
 
 @media screen and (max-width : 800px) {
@@ -287,6 +285,10 @@ main #main-content .main-content-items:hover{
         font-size: 16px;
     }
 
+    
+    main #main-content {
+        height: 350px;
+    }
 
 }
 
