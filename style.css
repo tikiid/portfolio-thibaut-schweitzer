@@ -111,6 +111,8 @@ header aside nav{
     height: 100vh;
 }
 
+
+
 header aside nav div a{
     z-index: 10;
     cursor: pointer;
@@ -206,17 +208,17 @@ main{
 
 /* PROJECTS */
 
-main #main-content{
+main .swiper{
     display: flex;
-    flex-wrap: wrap;
     gap: 64px;
     justify-content: center;
     position: relative;
-    height: 430px;
+    height: 450px;
     width: 100%;
+    overflow-y: scroll;
 }
-
-.main-content-wrapper {
+/*
+.swiper-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -225,9 +227,9 @@ main #main-content{
     gap: 15px;
     padding: 10px;
 }
+*/
 
-
-main #main-content .main-content-items {
+.swiper-slide {
     display: flex;
     flex-direction: column;
     background-color: var(--color-white-hex);
@@ -237,24 +239,26 @@ main #main-content .main-content-items {
     height: 90%;
     transition: 0.2s;
     white-space: normal;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 
-main #main-content .main-content-items:hover{
+.swiper-slide:hover{
     box-shadow: 0px 3px 10px white;
 }
 
-.main-content-items .card-image-project{
+.swiper-slide .card-image-project{
     max-height: 200px;
     margin-bottom:  5px; ;
 }
 
-.main-content-items .card-image-project img{
+.swiper-slide .card-image-project img{
     width: 100%;
     border-radius: 15px;
 }
 
-.main-content-items .project-card-content {
+.swiper-slide .project-card-content {
     text-align: center;
     height: 70%;
     display: flex;

@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/logos/logo-ts.png" type="image" />
-
     <title>Portfolio</title>
 </head>
 <body>
     <header id="header">
         <aside>
             <nav>
-                    <div>
+                    <div class="menu-burger">
                         <div class="cross top"></div>
                         <div class="cross mid"></div>
                         <div class="cross bottom"></div>
@@ -45,17 +44,17 @@
             <div id="bottom-header-circle">
                 <!-- <a href="#all-project" id="next-button"><h3>Next</h3></a>
                 <a href="#header"><h3>Previous</h3></a> -->
-                <button type="button" id="next-button" onclick="smoothScroll(document.getElementById('all-project'))"><p>Next</p></button>
-                <button type="button" id="all-project" onclick="smoothScroll(document.getElementById('header'))"><p>Previous</p></button>
+                <button type="button" id="all-project" onclick="smoothScroll(document.getElementById('next-button'))"><p>Next</p></button>
+                <button type="button" id="next-button" onclick="smoothScroll(document.getElementById('header'))"><p>Previous</p></button>
             </div>
         </section>
     </header>    
     <main>
         <h2 class="color-white">My projects</h2>
-        <div id="main-content">
-            <div class="main-content-wrapper">
+        <div class="swiper">
+            <div class="swiper-wrapper">
                 <!-- Weather app -->
-                <section class="main-content-items" id="weather-app">
+                <section class="swiper-slide" id="weather-app">
                     <div class="card-image-project">
                         <img id="logo-minus" src="images/images_of_projects/weather_app1.png" alt="">
 
@@ -75,7 +74,7 @@
 
                 <!-- Minus -->
 
-                <section class="main-content-items" id="minus">
+                <section class="swiper-slide" id="minus">
                     <div class="card-image-project">
                         <img id="logo-minus" src="images/images_of_projects/minus.png" alt="">
 
@@ -95,7 +94,7 @@
 
                 <!-- Chrysalide -->
 
-                <section class="main-content-items" id="chrysalide">
+                <section class="swiper-slide" id="chrysalide">
                     <div class="card-image-project">
                     <img id="logo-chrysalide" src="images/images_of_projects/chrysalide.png" alt="">
                     </div>
@@ -112,7 +111,7 @@
                     </div> 
                 </section>
                 <!-- Arena Heores -->
-                <section class="main-content-items" id="arenaHeroes">
+                <section class="swiper-slide" id="arenaHeroes">
                     <div class="card-image-project">
                     <img src="images/images_of_projects/arena.png" alt="">
 
@@ -130,6 +129,9 @@
                     </div>
                 </section>
             </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
             
 
         </div>
@@ -140,7 +142,33 @@
 
     </footer>
 
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
+      
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            // Optional parameters
+            
+          
+            // If we need pagination
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+          
+            // Navigation arrows
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+          
+            // And if we need scrollbar
+            scrollbar: {
+              el: '.swiper-scrollbar',
+            },
+          });
 
+    </script>
     <script src="javascript.js"></script>
 </body>
 </html>
