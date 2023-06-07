@@ -209,25 +209,16 @@ main{
 /* PROJECTS */
 
 main .swiper{
-    display: flex;
-    gap: 64px;
-    justify-content: center;
-    position: relative;
     height: 450px;
     width: 100%;
-    overflow-y: scroll;
 }
-/*
-.swiper-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 100%;
-	font-size: 0;
-    gap: 15px;
-    padding: 10px;
+
+.swiper .swiper-wrapper {
+    cursor: grab;
+    height: 90%;
+	
 }
-*/
+
 
 .swiper-slide {
     display: flex;
@@ -236,11 +227,9 @@ main .swiper{
     padding: 20px;
     border-radius: 15px;
     max-width: 300px;
-    height: 90%;
+    height: 60%;
     transition: 0.2s;
     white-space: normal;
-    margin-bottom: 10px;
-    margin-top: 10px;
 }
 
 
@@ -260,7 +249,7 @@ main .swiper{
 
 .swiper-slide .project-card-content {
     text-align: center;
-    height: 70%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -279,7 +268,7 @@ main .swiper{
         font-size: 20px;
     }
 
-    main #main-content {
+    main .swiper {
         height: 400px;
     }
 }
@@ -290,7 +279,7 @@ main .swiper{
     }
 
     
-    main #main-content {
+    main .swiper {
         height: 350px;
     }
 

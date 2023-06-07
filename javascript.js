@@ -1,16 +1,3 @@
-  // import Swiper bundle with all modules installed
-  import Swiper from 'swiper/bundle';
-
-  // import styles bundle
-  import 'swiper/css/bundle';
-  import 'swiper/css/navigation';
-  import 'swiper/css/pagination';
-
-  // configure Swiper to use modules
-  Swiper.use([Navigation, Pagination]);
-
-  const swiper = require('./node_modules/swiper/swiper-bundle');
-
 nextButton = document.getElementById('next-button')
 
 window.smoothScroll = function(target) {
@@ -36,25 +23,25 @@ window.smoothScroll = function(target) {
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
 
-swiper = new Swiper('.swiper', {
-    spaceBetween: 10,
-    // Optional parameters
+// swiper = new Swiper('.swiper', {
+//     spaceBetween: 10,
+//     // Optional parameters
     
   
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
+//     // If we need pagination
+//     pagination: {
+//       el: '.swiper-pagination',
+//       clickable: true,
+//     },
   
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+//     // Navigation arrows
+//     navigation: {
+//       nextEl: '.swiper-button-next',
+//       prevEl: '.swiper-button-prev',
+//     },
   
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  });
+//     // And if we need scrollbar
+//     scrollbar: {
+//       el: '.swiper-scrollbar',
+//     },
+//   });

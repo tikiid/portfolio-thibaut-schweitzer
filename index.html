@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="icon" href="images/logos/logo-ts.png" type="image" />
     <title>Portfolio</title>
 </head>
@@ -44,8 +45,8 @@
             <div id="bottom-header-circle">
                 <!-- <a href="#all-project" id="next-button"><h3>Next</h3></a>
                 <a href="#header"><h3>Previous</h3></a> -->
-                <button type="button" id="all-project" onclick="smoothScroll(document.getElementById('next-button'))"><p>Next</p></button>
-                <button type="button" id="next-button" onclick="smoothScroll(document.getElementById('header'))"><p>Previous</p></button>
+                <button type="button" id="all-project" onclick="smoothScroll(document.getElementById(next-button))"><p>Next</p></button>
+                <button type="button" id="next-button" onclick="smoothScroll(document.getElementById(header))"><p>Previous</p></button>
             </div>
         </section>
     </header>    
@@ -146,7 +147,7 @@
         import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
       
         const swiper = new Swiper('.swiper', {
-            spaceBetween: 10,
+            spaceBetween: 30,
             // Optional parameters
             
           
