@@ -11,25 +11,23 @@
 </head>
 <body>
     <header id="header">
+        <img class="logo-moi" src="images/logos/ST-logo.png" alt="logo Thibaut Schweitzer">
         <aside>
             <nav>
-                    <div class="menu-burger">
-                        <div class="cross top"></div>
-                        <div class="cross mid"></div>
-                        <div class="cross bottom"></div>
-                    </div>
-                    <a href="https://www.linkedin.com/in/thibaut-schweitzer-635223201/" target="_blank">
-                        <img src="images/logos/linkedin.png" alt="logo linkedin">
-                    </a>
-                    <a href="#" target="_blank">
-                        <img src="images/logos/github.png" alt="logo github">
-                    </a>
-                    <a href="#" target="_blank">
-                        <img src="images/logos/twitter.png" alt="logo twitter">
-                    </a>
-                    <a  href="#" target="_blank">
-                        <img src="images/logos/insta.png" alt="logo insta">  
-                    </a> 
+                <div class="menu-burger">
+                    <div class="cross top"></div>
+                    <div class="cross mid"></div>
+                    <div class="cross bottom"></div>
+                </div> 
+                <a href="mailto: thibaut.p.schweitzer@gmail.com" target="_blank">
+                    <img src="images/logos/mail.png" alt="logo mail">
+                </a>
+                <a href="https://github.com/tikiid" target="_blank">
+                    <img src="images/logos/github.png" alt="logo github">
+                </a>
+                <a href="https://www.linkedin.com/in/thibaut-schweitzer-635223201/" target="_blank">
+                    <img src="images/logos/linkedin.png" alt="logo linkedin">
+                </a>
             </nav>
         </aside>
         <section id="presentation-section">
@@ -45,8 +43,8 @@
             <div id="bottom-header-circle">
                 <!-- <a href="#all-project" id="next-button"><h3>Next</h3></a>
                 <a href="#header"><h3>Previous</h3></a> -->
-                <button type="button" id="all-project" onclick="smoothScroll(document.getElementById(next-button))"><p>Next</p></button>
-                <button type="button" id="next-button" onclick="smoothScroll(document.getElementById(header))"><p>Previous</p></button>
+                <button type="button" id="all-project" onclick="smoothScroll(nextButton)"><p>Next</p></button>
+                <button type="button" id="next-button" onclick="smoothScroll(header)"><p>Previous</p></button>
             </div>
         </section>
     </header>    
@@ -56,19 +54,25 @@
             <div class="swiper-wrapper">
                 <!-- Weather app -->
                 <section class="swiper-slide" id="weather-app">
+                    <img class="info-icone" src="images/logos/infoicone.jpg" alt=""> 
+                    <div class="overlay-card">
+                        <h4>
+                            This is a web app that gives the temperature after entering a location. By doing this mini project 
+                            , I learnt how to use an API.
+                        </h4>
+                    </div>
                     <div class="card-image-project">
-                        <img id="logo-minus" src="images/images_of_projects/weather_app1.png" alt="">
+                        <img id="logo-minus" src="images/images_of_projects/weather_app1.png" alt="image de ma weather app">
 
                     </div>
                     <div class="project-card-content">
                         <div class="color-black">
                             <h3>Weather App</h3>
                             <h4>Training with APIs</h4>
-                            <h5>JS / APIs</h5>
+                            <h5>JS / OpenWeatherAPI</h5>
                         </div>
                         <div>
                             <a class="access_link" href="https://github.com/tikiid/tikiid-weather-app.github.io" target="_blank">Access</a>
-
                         </div>
                     </div>
                 </section>
@@ -76,14 +80,20 @@
                 <!-- Minus -->
 
                 <section class="swiper-slide" id="minus">
+                    <img class="info-icone" src="images/logos/infoicone.jpg" alt=""> 
+                    <div class="overlay-card">
+                        <h4>
+                            This project is the result of an one week UX / UI sprint and one week front-end code. So we created the interface and we coded our site. about the concept, it is a site for a fictional children's lunch box brand. 
+                        </h4>
+                    </div>
                     <div class="card-image-project">
-                        <img id="logo-minus" src="images/images_of_projects/minus.png" alt="">
+                        <img id="logo-minus" src="images/images_of_projects/minus.png" alt="image du projet minus">
 
                     </div>
                     <div class="project-card-content">
                         <div class="color-black">
                             <h3>Project Minus</h3>
-                            <h4>UX/UI sprint</h4>
+                            <h4>UX / UI Sprint - fake meal box brand</h4>
                             <h5>HTML / CSS / JS </h5>
                         </div>
                         <div>
@@ -96,14 +106,20 @@
                 <!-- Chrysalide -->
 
                 <section class="swiper-slide" id="chrysalide">
+                    <img class="info-icone" src="images/logos/infoicone.jpg" alt=""> 
+                    <div class="overlay-card">
+                        <h4>
+                            For this project, we created a social media. With this app, you can create a sports event between others teams and gain points in the app. We used PHP and AJAX for the website and also a SQL data base.
+                        </h4>
+                    </div>
                     <div class="card-image-project">
-                    <img id="logo-chrysalide" src="images/images_of_projects/chrysalide.png" alt="">
+                    <img id="logo-chrysalide" src="images/images_of_projects/chrysalide.png" alt="image du projet chrysalide">
                     </div>
                     
                     <div class="project-card-content">
                         <div class="color-black">
                             <h3>Project Chrysalide</h3>
-                            <h4>Back-end project</h4>
+                            <h4>Back-end project - social media : Sport event organizer</h4>
                             <h5>JS / PHP / SQL</h5>
                         </div>
                         <div>
@@ -113,12 +129,18 @@
                 </section>
                 <!-- Arena Heores -->
                 <section class="swiper-slide" id="arenaHeroes">
+                    <img class="info-icone" src="images/logos/infoicone.jpg" alt=""> 
+                    <div class="overlay-card">
+                        <h4>
+                            This is a web game developped in one week. For this project, my group and I made a plateform shooter. We used KaboomJS to create the game logic and we created a NodeJS API to communicate with the front part (Kaboom).
+                        </h4>
+                    </div>
                     <div class="card-image-project">
-                    <img src="images/images_of_projects/arena.png" alt="">
+                    <img src="images/images_of_projects/arena.png" alt="image du projet arenaheores">
 
                     </div>
                     
-                    <div class="project-card-content">
+                    <div class="project-card-content arenaheroes">
                         <div class="color-black">
                             <h3>Project ArenaHeroes</h3>
                             <h4>A plateform shooter developped in one week.</h4>
@@ -129,14 +151,28 @@
                         </div>
                     </div>
                 </section>
+                
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            
             <div class="swiper-scrollbar"></div>
+            
             
 
         </div>
-        
+        <div class="link-description color-white">
+            <p>Link to access github pages project</p>
+        </div>
+        <section class="about-me">
+            <h2 class="color-white">About me</h2>
+            <div class="about-me-content">
+                <h3>
+                    
+                </h3>
+                <p>
+
+                </p>
+            </div>
+        </section>
 
     </main>
     <footer>
@@ -148,6 +184,8 @@
       
         const swiper = new Swiper('.swiper', {
             spaceBetween: 30,
+            slidesPerView: "auto",
+            centeredSlides: true,
             // Optional parameters
             
           
@@ -156,13 +194,7 @@
               el: '.swiper-pagination',
               clickable: true,
             },
-          
-            // Navigation arrows
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-          
+
             // And if we need scrollbar
             scrollbar: {
               el: '.swiper-scrollbar',

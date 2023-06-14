@@ -1,4 +1,5 @@
-nextButton = document.getElementById('next-button')
+nextButton = document.getElementById('next-button');
+header = document.querySelector('header');
 
 window.smoothScroll = function(target) {
     var scrollContainer = target;
@@ -22,26 +23,3 @@ window.smoothScroll = function(target) {
     // start scrolling
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
-
-// swiper = new Swiper('.swiper', {
-//     spaceBetween: 10,
-//     // Optional parameters
-    
-  
-//     // If we need pagination
-//     pagination: {
-//       el: '.swiper-pagination',
-//       clickable: true,
-//     },
-  
-//     // Navigation arrows
-//     navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//     },
-  
-//     // And if we need scrollbar
-//     scrollbar: {
-//       el: '.swiper-scrollbar',
-//     },
-//   });
